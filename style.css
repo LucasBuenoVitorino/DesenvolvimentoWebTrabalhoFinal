@@ -135,6 +135,23 @@ ul {
     background-color: #002244;
 }
 
+#toggle-certificados {
+    display: block;
+    margin: 0 auto 12px;
+    padding: 8px 12px;
+    color: #333;
+    background-color: #beeec0;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#toggle-certificados:hover,
+#toggle-certificados:focus-visible {
+    color: #beeec0;
+    background-color: #333;
+}
+
 @media (max-width: 600px) {
     #cabecalho {
         flex-direction: column;
