@@ -15,16 +15,26 @@ nav {
     background-color: #beeec0;
     padding: 10px;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
+}
+
+nav.menu {
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px clamp(12px, 4vw, 36px);
 }
 
 nav.menu a {
-    display: inline-block;
-    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    margin-left: 0;
+    padding: 8px 16px;
     border-radius: 6px;
+    text-align: center;
     transition: background-color 180ms ease, color 180ms ease;
-
-
 }
 
 nav.menu a:hover,
@@ -133,6 +143,24 @@ ul {
     border: solid 4px sienna;
     font-size: 18px;
     background-color: #002244;
+}
+
+@media (max-width: 768px) {
+    nav.menu {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    nav.menu {
+        gap: 6px;
+        padding: 8px 12px;
+    }
+
+    nav.menu a {
+        flex: 1 1 70px;
+        padding: 8px 10px;
+    }
 }
 
 #toggle-certificados {
