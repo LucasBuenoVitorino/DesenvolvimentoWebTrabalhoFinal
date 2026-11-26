@@ -81,7 +81,7 @@ a {
     width: 240px;
     height: 240px;
     object-fit: cover;
-    clip-path: circle(50%);
+    clip-path: circle(43%);
 }
 
 p {
