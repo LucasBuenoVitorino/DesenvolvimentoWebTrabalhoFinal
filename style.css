@@ -215,3 +215,191 @@ ul {
         text-align: center;
     }
 }
+
+.pagina-inicial #cabecalho {
+    gap: clamp(24px, 5vw, 56px);
+    padding: 44px 24px;
+    background: linear-gradient(130deg, #24473d, #333 82%);
+}
+
+.pagina-inicial #minha_foto {
+    width: clamp(170px, 22vw, 220px);
+    height: clamp(170px, 22vw, 220px);
+    border: 5px solid #beeec0;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+}
+
+.pagina-inicial .informacoes-cabecalho {
+    max-width: 580px;
+}
+
+.pagina-inicial #cabecalho h1 {
+    margin-bottom: 10px;
+    color: #beeec0;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+    text-align: left;
+}
+
+.pagina-inicial #cabecalho p {
+    margin: 0;
+    color: antiquewhite;
+    text-align: left;
+}
+
+.pagina-inicial main {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    width: min(1200px, calc(100% - 40px));
+    margin: 32px auto;
+}
+
+.pagina-inicial main section {
+    min-width: 0;
+    padding: 22px;
+    border: 3px groove rgba(190, 238, 192, 0.55);
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.pagina-inicial main section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.3);
+}
+
+.pagina-inicial main section h2 {
+    margin: 0 0 16px;
+    color: #23443a;
+    text-align: left;
+}
+
+.pagina-inicial #formacao_academica {
+    margin: 0;
+    padding: 22px;
+    background: #66cdaa;
+    border: 3px groove rgba(190, 238, 192, 0.55);
+}
+
+.pagina-inicial #experiencia_profissional {
+    margin: 0;
+    padding: 22px;
+    background: #00a693;
+    border: 3px groove rgba(190, 238, 192, 0.55);
+}
+
+.pagina-inicial #formacao_academica p,
+.pagina-inicial #experiencia_profissional p {
+    margin: 0;
+    color: #263b34;
+    text-align: left;
+}
+
+.pagina-inicial #formacao_academica p:nth-of-type(odd) {
+    margin-top: 16px;
+    color: #174f3e;
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.pagina-inicial #formacao_academica p:nth-of-type(1) {
+    margin-top: 0;
+}
+
+.pagina-inicial #certificados {
+    grid-column: 1 / -1;
+    background: #002244;
+    border-color: rgba(190, 238, 192, 0.65);
+}
+
+.pagina-inicial #certificados h2 {
+    color: #beeec0;
+}
+
+.pagina-inicial #certificados ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    list-style: none;
+}
+
+.pagina-inicial #certificados ul[hidden] {
+    display: none;
+}
+
+.pagina-inicial #certificados li {
+    position: relative;
+    padding: 12px 14px 12px 36px;
+    background: #e4f2e8;
+    border: 1px solid rgba(190, 238, 192, 0.65);
+    border-radius: 10px;
+    color: #263b34;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.pagina-inicial #certificados li::before {
+    position: absolute;
+    top: 12px;
+    left: 13px;
+    color: #176b58;
+    content: "✓";
+    font-weight: 700;
+}
+
+.pagina-inicial #toggle-certificados {
+    margin: 0 0 16px;
+    padding: 9px 16px;
+    background: #beeec0;
+    border-radius: 999px;
+    color: #263b34;
+    font-weight: 600;
+}
+
+.pagina-inicial #toggle-certificados:hover,
+.pagina-inicial #toggle-certificados:focus-visible {
+    background: #d7f3da;
+    color: #174f3e;
+}
+
+.pagina-inicial footer {
+    background: #292929;
+}
+
+@media (max-width: 700px) {
+    .pagina-inicial main {
+        grid-template-columns: 1fr;
+        width: min(100% - 28px, 560px);
+        margin: 24px auto;
+    }
+
+    .pagina-inicial #certificados {
+        grid-column: auto;
+    }
+
+    .pagina-inicial #cabecalho h1,
+    .pagina-inicial #cabecalho p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .pagina-inicial #certificados ul {
+        grid-template-columns: 1fr;
+    }
+
+    .pagina-inicial main section {
+        padding: 18px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pagina-inicial main section {
+        transition: none;
+    }
+}
