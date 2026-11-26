@@ -96,6 +96,14 @@ h4 {
     text-align: center;
 }
 
+h1 {
+    font-family: "JetBrains Mono", monospace;
+}
+
+h2 {
+    font-family: "Isometra", sans-serif;
+}
+
 main {
     flex: 1;
 }
